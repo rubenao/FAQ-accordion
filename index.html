@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ accordion card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="card">
+        <div class="card-img">
+            <div class="img-bg"></div>
+            <div class="img-main"></div>
+            <div class="img-box"></div>
+        </div>
+        <div class="card-content">
+            <h2>FAQ</h2>
+            <div class="question">
+                <div class="question-button">
+                    <button>How many team members can I invite? </button>
+                    <img src="/images/icon-arrow-down.svg" alt="arrow">
+                </div>
+                
+                <div class="answer">
+                    <p>You can invite up to 2 additional users on the Free plan. There is no limit on 
+                        team members for the Premium plan.</p>
+                </div>
+            </div>
+            <div class="question">
+                <div class="question-button">
+                    <button>What is the maximum file upload size?</button>
+                    <img src="/images/icon-arrow-down.svg" alt="arrow">
+                
+                </div>
+                <div class="answer">
+                    <p>No more than 2GB. All files in your account must fit your allotted storage space.</p>
+                </div>
+            </div>
+            <div class="question">
+                <div class="question-button">
+                    <button>How do I reset my password?</button>
+                    <img src="/images/icon-arrow-down.svg" alt="arrow">
+                </div>
+                
+                <div class="answer">
+                    <p>Click “Forgot password” from the login page or “Change password” from your profile page.
+                        A reset link will be emailed to you.</p>
+                </div>
+            </div>
+            <div class="question">
+                <div class="question-button">
+                    <button>Can I cancel my subscription?</button>
+                    <img src="/images/icon-arrow-down.svg" alt="arrow">
+                </div>
+                
+                <div class="answer">
+                    <p>Yes! Send us a message and we’ll process your request no questions asked.</p>
+                </div>
+            </div>
+            <div class="question">
+                <div class="question-button">
+                    <button>Do you provide additional support?</button>
+                    <img src="/images/icon-arrow-down.svg" alt="arrow">
+                </div>
+                
+                <div class="answer">
+                    <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const question = document.querySelectorAll('.question-button')
+        const answer = document.querySelectorAll('.answer')
+        const button = document.querySelectorAll('button')
+
+
+        for (let i=0 ; i<question.length; i++){
+            question[i].addEventListener('click', myFunction)
+
+            function myFunction(){
+            answer[i].classList.toggle('open')
+            button[i].classList.toggle('active')
+        }
+        }
+        
+
+        
+    </script>
+    
+</body>
+</html>
